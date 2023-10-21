@@ -13,7 +13,8 @@ import { CurrentWeatherComponent } from './current-weather/current-weather.compo
     CurrentWeatherComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
