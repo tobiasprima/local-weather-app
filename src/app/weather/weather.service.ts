@@ -43,10 +43,10 @@ export class WeatherService {
   Observable<ICurrentWeather> {
     const uriParams = new HttpParams()
     .set('q', '${city},${country}')
-    .set('app.id', environment.appId)
+    .set('appid', environment.appId)
     return this.httpClient
       .get<ICurrentWeatherData>(
-        '${environment.baseUrl}api.openweathermap.org/data/2.5/weather?',
+        '${environment.baseUrl}api.openweathermap.org/data/2.5/weather',
           {params: uriParams}
       )
       .pipe(map(data => this.transformToICurrentWeather(data)))
